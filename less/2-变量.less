@@ -1,0 +1,28 @@
+/*
+    sdasd  -- 编译后可看见注释
+*/
+
+// 111111  --- 编译后不可见注释
+
+@width: 100px;
+@h: 200px;
+@bg: #ffb900;
+
+// 变量去定义一个属性名
+@property:color;
+
+// 定义路径
+@images:'../images';
+
+.box1 {
+    width: @width;
+    height: @h;
+    background-color: @bg;
+    @{property}:red;
+}
+
+.box2 {
+    width: @width;
+    height: @h;
+    background-image: url('@{images}/hope_Logo.png');
+}

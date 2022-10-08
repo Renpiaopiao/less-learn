@@ -1,0 +1,9 @@
+/*
+    sdasd  -- 编译后可看见注释
+*/
+.box1 {
+  width: 100px;
+  height: 200px;
+  background-color: #ffb900;
+  color: red;
+}
