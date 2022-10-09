@@ -6,11 +6,12 @@
     function dfs(grid,r,c){
         let nr = grid.length
         let mr = grid[0].length
-        grid[r][c] = 0
-        if(r-1>0 && grid[r-1][c]=='1') dfs(grid,r-1,c)
-        if(r+1<nr && grid[r+1][c]=='1') dfs(grid,r+1,c)
-        if(c-1>0 && grid[r][c-1]=='1') dfs(grid,r,c-1)
-        if(c+1<mr && grid[r][c+1] =='1') dfs(grid,r,c+1)
+        if(r>=nr || c>=mr || c<0 || r<0 || grid[r][c]=='0') return
+        grid[r][c] = "0"
+        dfs(grid,r-1,c)
+        dfs(grid,r+1,c)
+        dfs(grid,r,c-1)
+        dfs(grid,r,c+1)
     }
     let n = grid.length
     if(!n) return 0

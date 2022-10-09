@@ -1,0 +1,26 @@
+.box1 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    border-width: 10px;
+    border-color: transparent transparent red transparent;
+    border-style: dashed dashed solid dashed;
+}
+
+.triangle(top,@w:5px,@c:red){
+    border-width: @w;
+    border-color: transparent transparent @c transparent;
+    border-style: dashed dashed solid dashed;
+}
+
+// 公共的样式单独抽出来  @_ 固定格式
+.triangle(@_, @w:5px, @c:red){
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.box2 {
+    .triangle(top,40px,green)
+}

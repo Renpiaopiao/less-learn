@@ -13,3 +13,50 @@
     height: @width;
     .class;
 }
+
+// 混合带参数
+.bg(@bg){
+    background: @bg;
+}
+
+.box2 {
+    width: 200px;
+    height: 300px;
+    .bg(blue)
+}
+
+// 混合带参数 -- 默认值
+.border1(@w:10px){
+    border: @w solid green;
+}
+
+.box3 {
+    width: 200px;
+    height: 300px;
+    .bg(blue);
+    .border1(30px)
+}
+
+
+// 混合带多个参数 -- 默认值
+.border2(@w:4px,@type:solid,@color:red){
+    border: @w @type @color;
+}
+
+.box4 {
+    width: 200px;
+    height: 300px;
+    .bg(blue);
+    .border2(10px,dotted,black);
+
+    // 改其中一条
+    .border2(@color:yellow)
+}
+
+
+//
+.boxShadow(@x:4px,@y:4px,@area:5px,@color:#ccc){
+
+}
+
+
